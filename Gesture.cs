@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace RPSLSApp
 {
-    internal abstract class Gesture
+    public abstract class Gesture
     {
-        string name;
+        public string name;
 
-        public Gesture(string name)
-        {
-            this.name = name;
-        }
-
-        public abstract bool CompareGestures();
+        public abstract int CompareGestures(Gesture gesture);
     }
 }

@@ -8,15 +8,26 @@ namespace RPSLSApp
 {
     internal abstract class Player
     {
-        public Gesture selectedGesture;
+        public string name;
+        public Gesture currentGesture;
         public List<Gesture> gestures;
         //Needs to implement a choose gestue method.
         //Needs to have a list of possible gestures.
         public Player()
         {
-            this.selectedGesture = null;
-            this.gestures = new List<Gesture>() { ""}
+            this.currentGesture = null;
+            this.gestures = new List<Gesture>();
+            Lizard lizard = new Lizard();
+            Rock rock = new Rock();
+            Paper paper = new Paper();
+            Scissors scissors = new Scissors();
+            Spock spock = new Spock();
+            gestures.Add(rock);
+            gestures.Add(paper);
+            gestures.Add(scissors);
+            gestures.Add(lizard);
+            gestures.Add(spock);
         }
-        public abstract Gesture ChooseGesture();
+        public abstract void SetCurrentGesture();
     }
 }
