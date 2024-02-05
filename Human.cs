@@ -32,24 +32,7 @@ namespace RPSLSApp
                     validInput = true;
                 }
             }
-            switch(input)
-            {
-                case 1:
-                    this.currentGesture = this.gestures[0];
-                    break;
-                case 2:
-                    this.currentGesture = this.gestures[1];
-                    break;
-                case 3:
-                    this.currentGesture = this.gestures[2];
-                    break;
-                case 4:
-                    this.currentGesture = this.gestures[3];
-                    break;
-                case 5:
-                    this.currentGesture = this.gestures[4];
-                    break;
-            }
+            this.currentGesture = this.gestures[input - 1];
         }
     }
 }

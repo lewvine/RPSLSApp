@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Game game = new Game();
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock");
+            int numberOfPlayers = game.SelectNumberOfPlayers();
+            game.SetPlayerNames(numberOfPlayers);
+            Console.Clear();
+            while(game.playerOneScore < 3 || game.playerTwoScore < 3)
+            {
+                game.Round();
+            }
         }
     }
 }
