@@ -20,12 +20,7 @@ namespace RPSLSApp
             int input = 0;
             while(!validInput)
             {
-                Console.WriteLine($"{this.name} please choose a gesture");
-                Console.WriteLine("Select (1) for Rock");
-                Console.WriteLine("Select (2) for Paper");
-                Console.WriteLine("Select (3) for Scissors");
-                Console.WriteLine("Select (4) for Lizard");
-                Console.WriteLine("Select (5) for Spock");
+                Console.WriteLine($"{this.name} please choose a gesture: (1) ROCK, (2) PAPER, (3) SCISSORS, (4) LIZARD, (5) SPOCK");
                 Int32.TryParse(Console.ReadLine(), out input);
                 if(input == 1 || input == 2 || input == 3 || input == 4 || input == 5)
                 {
